@@ -1,0 +1,15 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %}Lista de pilotos{% endblock %}
+
+{% block body %}
+  <ul>
+    {% for piloto in pilotos %}
+      <li>
+        <a href="{{ path('app_piloto_ver_id', { id: piloto.id }) }}">
+          {{ piloto.nome }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

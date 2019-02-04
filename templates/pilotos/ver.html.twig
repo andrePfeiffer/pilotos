@@ -1,0 +1,8 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %}Piloto {{  piloto.nome }}{% endblock %}
+
+{% block body %}
+  <h1>{{  piloto.nome }} - {{  piloto.email }}</h1>
+  <a href="{{ path('app_piloto_verTodos') }}">ver todos</a>
+{% endblock %}
