@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
   /**
-   * @Route("/")
+   * @Route("/", name="app_homepage")
    */
   public function homepage()
   {
@@ -27,6 +27,7 @@ class DefaultController extends AbstractController
       1 => ['1202', 'Réplica', '03/02/2019', 2],
       2 => ['1203', 'Réplica', '10/02/2019', 7],
     ];
+
     return $this->render('pilotos/piloto.html.twig',[
       'title' => ucwords(str_replace('-',' ', $nome_do_piloto)),
       'corridas' => $corridas,

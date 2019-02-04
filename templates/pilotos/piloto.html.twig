@@ -3,6 +3,8 @@
 {% block title %}Piloto {{  title }}{% endblock %}
 
 {% block body %}
+  {{ dump() }}
+  <a href="{{ path('app_homepage') }}">Homepage</a>
   <h1>{{  title }}</h1>
 
   <h2>Últimas {{ corridas|length }} corridas</h2>
