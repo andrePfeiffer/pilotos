@@ -1,0 +1,14 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %}Piloto {{  title }}{% endblock %}
+
+{% block body %}
+  <h1>{{  title }}</h1>
+
+  <h2>Últimas {{ corridas|length }} corridas</h2>
+  <ul>
+    {% for corrida in corridas %}
+      <li><a href="corridas/detalhe/{{ corrida[0] }}">{{ corrida[1] }} - {{ corrida[2] }}: {{ corrida[3] }} posição</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
