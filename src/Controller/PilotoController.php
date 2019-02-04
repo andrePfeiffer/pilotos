@@ -52,6 +52,9 @@ class PilotoController extends AbstractController
     $repository = $em->getRepository(Piloto::class);
     /** @var Piloto $pilotos */
     $piloto= $repository->findOneBy(['id' => $id]);
+    if(!$piloto){
+      throw $this->createNotFoundException('Não tem piloto com o id %d', $id);
+    }
     return $this->render('pilotos/ver.html.twig', [
       'piloto'  => $piloto
     ]);
