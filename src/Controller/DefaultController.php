@@ -9,11 +9,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-  /**
-   * @Route("/", name="app_homepage")
-   */
-  public function homepage()
-  {
-    return new Response("Olá mundo");
-  }
+    /**
+     * @Route("/", name="app_homepage")
+     */
+    public function homepage()
+    {
+        return new Response("Olá mundo");
+    }
 }

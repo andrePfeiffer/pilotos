@@ -19,22 +19,20 @@ class PilotoRepository extends ServiceEntityRepository
         parent::__construct($registry, Piloto::class);
     }
 
-    // /**
-    //  * @return Piloto[] Returns an array of Piloto objects
-    //  */
-    /*
-    public function findByExampleField($value)
+     /**
+      * @return Piloto[] Returns an array of Piloto objects
+      */
+    public function verTodos()
     {
         return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
+//            ->andWhere('p.exampleField = :val')
+//            ->setParameter('val', $value)
+            ->orderBy('p.nome', 'ASC')
+//            ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?Piloto
